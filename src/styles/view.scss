@@ -1,0 +1,23 @@
+$headerSize: 61px;
+
+.view {
+
+  height: 100vh;
+
+  &-with-header {
+    margin-top: $headerSize;
+    height: calc(100vh - #{$headerSize});
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    height: $headerSize;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

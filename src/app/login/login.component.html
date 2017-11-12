@@ -1,0 +1,17 @@
+<section>
+  <h1>Bricky</h1>
+  <div class="slogan">
+    <b>Bentornato!</b>
+    <p>Esegui la login per accedere a Briky</p>
+  </div>
+
+
+  <form (ngSubmit)="login()">
+    <input type="email" name="email" [(ngModel)]="userData.email" placeholder="Email" required="required">
+
+    <input type="password" name="password" [(ngModel)]="userData.password" placeholder="Password" required="required">
+
+    <button type="submit">Login</button>
+  </form>
+
+</section>

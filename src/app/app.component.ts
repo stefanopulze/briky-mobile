@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {AppStorage} from "./_security/AppStorage.storage";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+
+  constructor(storage: AppStorage, router: Router) {
+    if(!storage.isLogged()) {
+      router.navigate(['/login']);
+    }
+  }
+
 }
